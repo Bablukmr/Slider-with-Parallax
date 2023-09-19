@@ -8,12 +8,13 @@ import img2 from '../../images/bannertwo.jpg'
 import img3 from '../../images/bannerthree.jpg'
 import Slider from 'react-slick';
 import BannerText from "./BannerText";
+import { motion } from "framer-motion";
 
 export default function Banner() {
 const NextArrow=(props)=>{
   const {onclick}=props
   return(
-    <div><PiCaretRightLight/></div>
+    <div className="rightArrow"><PiCaretRightLight/></div>
   )
 }
 const PrevArrow=(props)=>{
@@ -37,8 +38,16 @@ const PrevArrow=(props)=>{
   return (
     <div className="maindiv">
        <Slider {...settings}>
+      <motion.div  className="banner">
+       <img src={img2} alt="IMG1" className="bannerimg"/>
+       <BannerText title="Title"/>
+      </motion.div >
       <div className="banner">
        <img src={img1} alt="IMG1" className="bannerimg"/>
+       <BannerText title="Title"/>
+      </div>
+      <div className="banner">
+       <img src={img3} alt="IMG1" className="bannerimg"/>
        <BannerText title="Title"/>
       </div>
       

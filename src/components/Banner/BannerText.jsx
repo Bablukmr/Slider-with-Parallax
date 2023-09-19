@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Banner.css";
 
-function BannerText({ title }) {
+function BannerText({ title,paragraph }) {
   return (
     <div className="bannertext">
       <div className="container">
@@ -17,9 +17,7 @@ function BannerText({ title }) {
         <motion.p  initial={{ y: 60, opacity: .3 }}
           whileInView={{ y: 10, opacity: 1 }}
           transition={{ duration: 0.9 }}
-          className="paragraph" >
-          Manage school events, the practice schedule, dentist appointments,
-          vacations—whatever you need!
+          className="paragraph" >{paragraph}
         </motion.p>
         <motion.div initial={{ y: 60, opacity: .3 }}
           whileInView={{ y: 30, opacity: 1 }}

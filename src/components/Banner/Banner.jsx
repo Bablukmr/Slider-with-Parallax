@@ -12,15 +12,15 @@ import { motion } from "framer-motion";
 
 export default function Banner() {
 const NextArrow=(props)=>{
-  const {onclick}=props
+  const {onClick}=props
   return(
-    <div className="rightArrow"><PiCaretRightLight/></div>
+    <div onClick={onClick} className=" leftArrow"><PiCaretLeftLight/></div>
   )
 }
 const PrevArrow=(props)=>{
-  const {onclick}=props
+  const {onClick}=props
   return(
-  <div><PiCaretLeftLight/></div>
+  <div onClick={onClick} className="rightArrow"><PiCaretRightLight/></div>
   )
 }
   var settings = {
@@ -40,15 +40,15 @@ const PrevArrow=(props)=>{
        <Slider {...settings}>
       <motion.div  className="banner">
        <img src={img2} alt="IMG1" className="bannerimg"/>
-       <BannerText title="Title"/>
+       <BannerText title="The Adventure Begins" paragraph='Every adventure is a chance to learn, to grow, and to connect with the world in ways you never imagined. Whether your setting off on a solo backpacking expedition through rugged landscapes or embarking on a journey with friends and loved ones, the experiences that await are bound to leave an indelible mark on your soul.' />
       </motion.div >
       <div className="banner">
        <img src={img1} alt="IMG1" className="bannerimg"/>
-       <BannerText title="Title"/>
+       <BannerText title="Exploring New Horizons" paragraph="With each step you take into uncharted territory, you'll encounter a tapestry of cultures, landscapes, and ideas that will enrich your understanding of the world. From the bustling streets of foreign cities to the serene solitude of remote natural wonders,"/>
       </div>
       <div className="banner">
        <img src={img3} alt="IMG1" className="bannerimg"/>
-       <BannerText title="Title"/>
+       <BannerText title="TitChasing Dreamsle" paragraph="Chasing dreams is not a linear path; it's a winding road filled with ups and downs. There will be moments of doubt, setbacks, and challenges that test your resolve. Yet, it's precisely these moments that shape your character and reveal your strength."/>
       </div>
       
     </Slider>

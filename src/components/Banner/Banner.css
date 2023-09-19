@@ -95,7 +95,10 @@
     z-index: 20;
     top: 50%; 
   }
-
+  .leftArrow:hover,
+  .rightArrow:hover {
+    background-color: rgba(144, 136, 185, 0.381);
+  }
   @media screen and (max-width: 755px) {
     .titletext {
       font-size: 1rem;
